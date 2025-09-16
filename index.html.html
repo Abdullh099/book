@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>كتاب تهنئة</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Tahoma', sans-serif;
+      background: linear-gradient(to bottom, #fff0f5, #ffe4b5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+    .book {
+      width: 300px;
+      height: 450px;
+      perspective: 2000px;
+      position: relative;
+      z-index: 2;
+    }
+    .page {
+      width: 100%;
+      height: 100%;
+      background: white;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      border-radius: 12px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform-origin: right;
+      transition: transform 1s;
+      overflow: hidden;
+      border: 2px dashed #ffb6c1; /* إطار زخرفي باهت */
+    }
+    .cover {
+      background: linear-gradient(135deg, #8b0000, #b22222);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 22px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      border: 4px solid gold;
+      border-radius: 15px;
+      text-shadow: 2px 2px 5px #000;
+    }
+    .cover::after {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(120deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 60%);
+      transform: rotate(25deg);
+      animation: shine 3s infinite;
+    }
+    @keyframes shine {
+      0% { transform: rotate(25deg) translateX(-100%); }
+      100% { transform: rotate(25deg) translateX(100%); }
+    }
+    .page-content {
+      padding: 20px;
+      height: 100%;
+      overflow-y: auto;
+      position: relative;
+      font-size: 14px;
+      background: linear-gradient(to bottom right, #fffafa, #fff0f5);
+      border: 1px dotted #f08080; /* زخرفة خفيفة */
+    }
+    .page-content h2 {
+      text-align: center;
+      font-size: 18px;
+      color: #b22222;
+      text-shadow: 1px 1px 3px #aaa;
+    }
+    .hearts {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 1;
+    }
+    .heart {
+      position: absolute;
+      color: rgba(255,0,0,0.6);
+      font-size: 18px;
+      animation: float 6s linear infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(100vh) scale(1); opacity: 1; }
+      100% { transform: translateY(-10vh) scale(1.5); opacity: 0; }
+    }
+    .controls {
+      position: absolute;
+      bottom: -60px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      z-index: 3;
+    }
+    button {
+      background: #b91c1c;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    button:hover { background: #dc2626; }
+  </style>
+</head>
+<body>
+  <div class="book" id="book">
+    <div class="page cover" style="z-index:6">
+      <div>𝔽𝕠𝕣 𝕪𝕠𝕦, 𝕠𝕟 𝕪𝕠𝕦𝕣 𝕤𝕡𝕖𝕔𝕚𝕒𝕝 𝕕𝕒𝕪.<br>𝔸 𝕝𝕚𝕥𝕥𝕝𝕖 𝕘𝕚𝕗𝕥, ℍ𝕠𝕡𝕖 𝕪𝕠𝕦’𝕝𝕝 𝕝𝕠𝕧𝕖 𝕚𝕥.💗</div>
+    </div>
+    <div class="page" style="z-index:5">
+      <div class="page-content">
+        <h2>💗</h2>
+        <p>عيد ميلاد سعيد!<br><br>
+       كل سنة وأنتِ أجمل وأقرب حد لقلبي 🎉💗 بجد وجودك في حياتي نعمة، وبحبك وبعِزك جدًا، يمكن مبعرفش أعبّر كويس 😉، بس الأكيد إن ليكي مكانة محدش يقدر يتخيلها 😊✨ .</p>
+      </div>
+    </div>
+    <div class="page" style="z-index:4">
+      <div class="page-content">
+        <h2>💕</h2>
+        <p>كل لحظة معاكِ كانت صفحة حلوة.<br><br>
+       النهارده مش مجرد يوم، ده اليوم اللي الدنيا جابت فيه أجمل حد فيها 💗، واللي بوجوده كل حاجة بتبقى أحلى وألطف. لو ينفع أشكر الحياة على حاجة، فهتكون إنها جمّلتها بوجودك فيها، وده لأنك شخص مش بيتعوّض ابدا💗 متحمّس عشان نكتب صفحات أكتر مع بعض.</p>
+      </div>
+    </div>
+    <div class="page" style="z-index:3">
+      <div class="page-content">
+        <h2>💗</h2>
+        <p>أتمنى تفضلي مبسوطة دايمًا، وتحققي كل اللي بتتمنيه، وتفضلي قريبة من اللي بيحبوكي، وأكيد منّي أنا كمان 😉😉💗، يا رب أيامك تكون أحلى من أحلامك ♥</p>
+      </div>
+    </div>
+    <div class="page" style="z-index:2">
+      <div class="page-content">
+        <h2>My Promise💕</h2>
+        <p>I promise I will always be by your side, through every smile and every tear. My promise is to love you more each day, and never let you feel alone. You are my everything, and I’m so grateful to have you in my life.💗💗.</p>
+      </div>
+    </div>
+    <div class="page" style="z-index:1">
+      <div class="page-content">
+        <h2>For You💗</h2>
+        <p>To the one who holds my heart 💕<br>
+Happy Birthday, my love! On this special day, I want you to know how deeply you mean to me. You are not only my partner but also my best friend, my comfort, and my happiness. Every moment with you makes life more beautiful, and I’m so grateful for all the love and warmth you bring into my world. I hope this year gives you everything your heart desires, and I promise to be by your side, cheering for you and loving you more every single day💕💗.</p>
+      </div>
+    </div>
+    <div class="controls">
+      <button onclick="prevPage()">السابق</button>
+      <button onclick="nextPage()">التالي</button>
+    </div>
+    <div class="hearts" id="hearts"></div>
+  </div>
+
+  <script>
+    let current = 0;
+    const pages = document.querySelectorAll('.page');
+
+    function showPage(i){
+      pages.forEach((p, idx)=>{
+        if(idx < i){ p.style.transform = 'rotateY(180deg)'; }
+        else { p.style.transform = 'rotateY(0)'; }
+      });
+    }
+
+    function nextPage(){
+      if(current < pages.length){
+        current++;
+        showPage(current);
+      }
+    }
+    function prevPage(){
+      if(current > 0){
+        current--;
+        showPage(current);
+      }
+    }
+
+    // قلوب عشوائية حوالين الكتاب
+    function createHeart(){
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.innerText = '❤';
+      heart.style.left = Math.random() * window.innerWidth + 'px';
+      heart.style.top = window.innerHeight + 'px';
+      heart.style.fontSize = (16 + Math.random() * 20) + 'px';
+      document.body.appendChild(heart);
+      setTimeout(()=> heart.remove(),6000);
+    }
+    setInterval(createHeart, 1000);
+  </script>
+</body>
+</html>
